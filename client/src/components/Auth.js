@@ -34,7 +34,7 @@ function Auth({ onAuthSuccess }) {
         : { name, email, password };
 
       const response = await axios.post(
-        `http://localhost:5000/api/auth/${endpoint}`,
+        `https://customer-support-chatbot-et8t.onrender.com/api`,
         payload
       );
 
