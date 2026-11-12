@@ -21,7 +21,7 @@ import {
 
 import Auth from "./components/Auth";
 
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://customer-support-chatbot-et8t.onrender.com";
 
 // Create an Axios instance for backend requests
 const api = axios.create({

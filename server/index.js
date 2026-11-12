@@ -18,7 +18,10 @@ const MONGODB_URI = process.env.MONGODB_URI;
 // General middleware
 app.use(
   cors({
-    origin: "http://localhost:1234",
+    origin: [
+      "http://localhost:1234",
+      "https://serene-douhua-0cd8aa.netlify.app",
+    ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
