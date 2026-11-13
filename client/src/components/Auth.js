@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import axios from "axios";
 import {
   Headphones,
   Mail,
@@ -9,8 +8,9 @@ import {
   Eye,
   EyeOff,
 } from "lucide-react";
-
+import api from "../api";
 import "../styles/Auth.css";
+
 
 function Auth({ onAuthSuccess }) {
   const [isLogin, setIsLogin] = useState(true);
@@ -33,10 +33,10 @@ function Auth({ onAuthSuccess }) {
         ? { email, password }
         : { name, email, password };
 
-      const response = await axios.post(
-        `https://customer-support-chatbot-et8t.onrender.com/api`,
-        payload
-      );
+      const response = await api.post(
+  `${API_URL}/auth/${endpoint}`,
+  payload
+);
 
       onAuthSuccess(response.data);
     } catch (err) {

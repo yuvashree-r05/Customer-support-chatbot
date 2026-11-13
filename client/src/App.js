@@ -1,6 +1,5 @@
 
 import { useEffect, useState, useCallback } from "react";
-import axios from "axios";
 import ReactMarkdown from "react-markdown";
 
 import {
@@ -20,13 +19,7 @@ import {
 } from "lucide-react";
 
 import Auth from "./components/Auth";
-
-const API_URL = "https://customer-support-chatbot-et8t.onrender.com/api";
-
-// Create an Axios instance for backend requests
-const api = axios.create({
-  baseURL: API_URL,
-});
+import api from "./api";
 
 function App() {
   const [token, setToken] = useState(
