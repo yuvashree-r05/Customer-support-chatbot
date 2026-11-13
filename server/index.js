@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:1234",
-      "https://serene-douhua-0cd8aa.netlify.app",
+      "https://sparkling-pika-9583fd.netlify.app",
     ],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
