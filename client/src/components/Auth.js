@@ -34,7 +34,7 @@ function Auth({ onAuthSuccess }) {
         : { name, email, password };
 
       const response = await api.post(
-  `${API_URL}/auth/${endpoint}`,
+  `/auth/${endpoint}`,
   payload
 );
 
